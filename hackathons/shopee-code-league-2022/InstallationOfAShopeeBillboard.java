@@ -45,20 +45,21 @@ public class InstallationOfAShopeeBillboard {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		PrintWriter pw = null;
-		pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
+	PrintWriter pw = null;
+	pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
 
         int n = Integer.parseInt(br.readLine());
         String[] rodsString = br.readLine().split(" ");
         int[] rods = new int[n];
         int sum = 0;
-        for (int i=0; i<n; i++) {
+        for (int i = 0; i < n; i++) {
             int currRod = Integer.parseInt(rodsString[i]);
-        	rods[i] = currRod;
+       	    rods[i] = currRod;
             sum += currRod;
         } 
+	    
         pw.println(helper(rods, 0, 0, 0, 0, sum/2));
         pw.flush();
-		pw.close();
+	pw.close();
     }
 }
